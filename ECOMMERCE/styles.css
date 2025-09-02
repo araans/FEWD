@@ -1,0 +1,50 @@
+body,h1,h2,p,input,button{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+header{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+main{
+    padding: 2rem;
+    text-align: center;
+}
+footer{
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: #fff;
+}
+.cta{
+    
+}
+.signup-form, .signin-form { 
+    max-width: 300px; 
+    margin: 0 auto; 
+} 
+input { 
+    width: 100%; 
+    padding: 8px; 
+    margin-bottom: 10px;
+    border: 1px solid #ddd; 
+    border-radius: 3px; 
+} 
+button { 
+    display: inline-block; 
+    padding: 8px 20px; 
+    background-color: #333; 
+    color: #fff; 
+    border: none; 
+    border-radius: 3px; 
+    cursor: pointer;
+} 
+button:hover { 
+    background-color: #555; 
+}    
