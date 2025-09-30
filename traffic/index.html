@@ -14,8 +14,6 @@
             align-items: center;
             justify-content: space-between;
             margin-top:50px;
-            border: 3px solid #333;
-            background: linear-gradient(black,#333,#222)
         }
         .light{
             width:80px;
@@ -28,8 +26,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-image:url("bg.jpg");
-            background-size: cover;
         }
         .red{
             background-color: red;
@@ -54,27 +50,27 @@
         const yellowLight = document.querySelector('.yellow');
         const greenLight = document.querySelector('.green');
 
-        function changeLights(){
-            setTimeout(()=>{
+        function redSignal(){
                 redLight.style.backgroundColor='red';
                 yellowLight.style.backgroundColor='transparent';
                 greenLight.style.backgroundColor='transparent';
+                setTimeout(yellowSignal,2000);
+        }
 
-            setTimeout(()=>{
+        function yellowSignal(){
                 redLight.style.backgroundColor='transparent';
                 yellowLight.style.backgroundColor='yellow';
                 greenLight.style.backgroundColor='transparent';
-
-            setTimeout(()=>{
+                setTimeout(greenSignal,2000);   
+        }
+        
+        function greenSignal(){
                 redLight.style.backgroundColor='transparent';
                 yellowLight.style.backgroundColor='transparent';
                 greenLight.style.backgroundColor='green';
-                changeLights();
-            },2000);
-            },1000);
-            },2000);
-        }   
-        changeLights();
+                setTimeout(redSignal,2000);
+            }   
+        redSignal();
     </script>
 </body>
 </html>
